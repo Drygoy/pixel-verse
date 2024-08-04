@@ -15,7 +15,7 @@ export default function Background() {
 		return () => clearInterval(intervalId);
 	}, []);
 	return (
-		<div className="w-full h-full overflow-hidden grid max-sm:grid-cols-[repeat(auto-fit,minmax(64px,1fr))] max-md:grid-cols-[repeat(auto-fit,minmax(80px,1fr))] max-lg:grid-cols-[repeat(auto-fit,minmax(128px,1fr))] grid-cols-[repeat(auto-fit,minmax(180px,1fr))]">
+		<div className="w-full animate-[fade_0.5s_ease] h-full overflow-hidden grid max-sm:grid-cols-[repeat(auto-fit,minmax(64px,1fr))] max-md:grid-cols-[repeat(auto-fit,minmax(80px,1fr))] max-lg:grid-cols-[repeat(auto-fit,minmax(128px,1fr))] grid-cols-[repeat(auto-fit,minmax(180px,1fr))]">
 			{json.map((item, index) => (
 				<Cube opacity={item.opacity / 100} color={item.color} key={index} />
 			))}
